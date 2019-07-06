@@ -1,0 +1,21 @@
+[ copy first block on console then copy access token of your page from .env after _token=]
+
+
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "get_started": {"payload": "GET_STARTED"}
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=<PAGE_ACCESS_TOKEN>"
+
+--------Welcome Message-------
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "greeting": [
+    {
+      "locale":"default",
+
+      "text":"Welcome to the Bot Hotel, I am here to help with all your questions."
+    }, 
+  ]
+}' "https://graph.facebook.com/v2.6/me/messenger_profile?access_token=<PAGE_ACCESS_TOKEN>"

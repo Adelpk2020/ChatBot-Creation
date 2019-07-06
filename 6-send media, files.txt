@@ -1,0 +1,79 @@
+function sendphoto(recipientId){
+const get_random_photo = ((ar) => ( ar[ Math.floor( Math.random() * ar.length ) ] ))
+var photo1 = "https://www.7srey.com/wp-content/uploads/2017/04/%D8%A3%D8%AC%D9%85%D9%84-%D8%B5%D9%88%D8%B1-44.jpg";
+
+const photo = [photo1]
+
+{
+ var messageData = {   
+   recipient: {
+        id: recipientId
+    },
+    message: {
+        attachment: {
+            type: "image",
+            payload: {
+                url: get_random_photo( photo )
+            }
+        }
+    }
+}
+}
+callSendAPI(messageData);}
+
+
+
+
+-------------
+ function sendaudio(recipientId){
+const get_random_song = ((ar) => ( ar[ Math.floor( Math.random() * ar.length ) ] ))
+var song1 = "http://docs.google.com/uc?export=open&id=0B80xfrsPl23cZ044YW1QMWI1QW8"; 
+const song = [song1]
+
+{
+ var messageData = {   
+   recipient: {
+        id: recipientId
+    },
+    message: {
+        attachment: {
+            type: "audio",
+            payload: {
+                url: get_random_song( song )
+            }
+        }
+    }
+}
+}
+callSendAPI(messageData);}
+
+
+
+
+---------------------------
+
+function sendVideo(recipientId){
+const get_random_Video = ((ar) => ( ar[ Math.floor( Math.random() * ar.length ) ] ))
+var Video1 = "https://dl.dropbox.com/s/vt1rjfouyrtggrz/VID-20171022-WA0025.mp4?dl=0";
+
+const Video = [Video1]
+
+{
+ var messageData = {   
+   recipient: {
+        id: recipientId
+    },
+    message: {
+        attachment: {
+            type: "video",
+            payload: {
+                url: get_random_Video( Video )
+            }
+        }
+    }
+}
+}
+callSendAPI(messageData);}
+
+
+
